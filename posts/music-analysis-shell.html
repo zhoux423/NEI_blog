@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Analysis Shell (Demo) — NEI'S blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/post-music-analysis.css">
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand">NEI'S blog <span class="nav-acronym">a blog by a Noticeably Exhausted Individual</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../categories/life.html">Life</a></li>
+        <li><a href="../categories/music.html">Music</a></li>
+        <li><a href="../categories/games.html">Games</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== A) Top Sticky Full-Track Player Bar ===== -->
+  <div class="music-top-player">
+    <audio id="fullTrack" src="../assets/audio/dummy.mp3" preload="metadata"></audio>
+    <div class="top-player-inner">
+      <img class="top-player-cover" src="../assets/images/cover-placeholder.png" alt="Album cover" width="48" height="48">
+      <div class="top-player-info">
+        <div class="top-player-title">Demo Track Title</div>
+        <div class="top-player-artist">Placeholder Artist</div>
+      </div>
+      <button class="player-btn" id="fullPlayBtn" aria-label="Play full track">
+        <svg viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg>
+      </button>
+      <div class="progress-container">
+        <span class="progress-time" id="fullTimeCurrent">0:00</span>
+        <div class="progress-bar-wrap" id="fullProgress">
+          <div class="progress-bar-fill" id="fullProgressFill"></div>
+        </div>
+        <span class="progress-time" id="fullTimeDuration">0:00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Two-Column Layout ===== -->
+  <main class="music-post-wrapper">
+
+    <!-- ===== B) Left Sticky Snippet Player ===== -->
+    <aside class="snippet-sidebar">
+      <div class="snippet-player">
+        <audio id="snippetTrack" preload="metadata"></audio>
+        <div class="snippet-label-prefix">Currently Playing</div>
+        <div class="snippet-label" id="snippetLabel">Intro (0:00–0:12)</div>
+        <button class="snippet-btn" id="snippetPlayBtn">
+          <svg viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg> Play Snippet
+        </button>
+        <div class="snippet-progress-wrap">
+          <div class="snippet-progress-fill" id="snippetProgressFill"></div>
+        </div>
+        <div class="snippet-time" id="snippetTime">0:00 / 0:12</div>
+      </div>
+    </aside>
+
+    <!-- ===== C) Main Analysis Column ===== -->
+    <article class="analysis-content">
+      <header class="post-header">
+        <h1>Music Analysis Shell (Demo)</h1>
+        <div class="post-meta">
+          <span class="post-card-category">Music</span>
+          <time datetime="2026-02-05">Feb 5, 2026</time>
+        </div>
+      </header>
+
+      <!-- Section 1: Intro -->
+      <section class="analysis-section"
+               data-start="0"
+               data-end="12"
+               data-label="Intro (0:00–0:12)">
+        <h2>Intro</h2>
+        <div class="section-timestamp">0:00 – 0:12</div>
+        <p>
+          The track opens with a sparse, atmospheric texture — a single sustained
+          synth pad drifts in from silence, immediately establishing the harmonic
+          center. There's a deliberate sense of space here; the producer leaves
+          room for the reverb tail to decay fully before introducing any
+          rhythmic elements.
+        </p>
+        <p>
+          Notice how the low-end is almost entirely absent at this point. This
+          is a classic arrangement technique: by withholding the bass frequencies
+          during the intro, the eventual drop hits significantly harder when
+          those frequencies finally arrive.
+        </p>
+      </section>
+
+      <!-- Section 2: Verse 1 -->
+      <section class="analysis-section"
+               data-start="12"
+               data-end="28"
+               data-label="Verse 1 (0:12–0:28)">
+        <h2>Verse 1</h2>
+        <div class="section-timestamp">0:12 – 0:28</div>
+        <p>
+          At 0:12 the beat drops in — a tight, syncopated drum pattern built
+          around a pitched 808 kick and crisp hi-hat rolls. The kick pattern
+          follows a dotted rhythm that creates a sense of forward momentum
+          without feeling rushed.
+        </p>
+        <p>
+          The vocal enters here with a half-sung, half-spoken delivery that
+          sits right on top of the beat. The processing chain is interesting:
+          you can hear subtle pitch correction blended with a short room reverb,
+          giving the voice an intimate but polished character. The melody stays
+          within a narrow range — mostly stepwise motion — which keeps the
+          verse feeling conversational.
+        </p>
+        <p>
+          Harmonically, we're sitting on a i–VI–III–VII progression in a minor
+          key. It's a well-worn loop, but the voicings are spread wide enough
+          to give it a fresh, open quality.
+        </p>
+      </section>
+
+      <!-- Section 3: Chorus -->
+      <section class="analysis-section"
+               data-start="28"
+               data-end="44"
+               data-label="Chorus (0:28–0:44)">
+        <h2>Chorus</h2>
+        <div class="section-timestamp">0:28 – 0:44</div>
+        <p>
+          The chorus lifts everything. The vocal jumps up an octave, the layering
+          thickens dramatically — you can hear at least three stacked vocal tracks
+          panned across the stereo field. There's a widening effect on the synths
+          as well, likely achieved through a combination of chorus and stereo
+          delay.
+        </p>
+        <p>
+          Rhythmically, the drums simplify. The hi-hat drops back to straight
+          eighth notes and the kick settles into a four-on-the-floor pattern.
+          This is counterintuitive — you'd expect the chorus to get busier — but
+          it works because the harmonic and melodic density has increased so
+          much that the drums need to anchor rather than compete.
+        </p>
+        <p>
+          The hook itself is essentially a two-bar melodic phrase repeated with
+          slight variation. It's catchy precisely because of its simplicity:
+          a pentatonic fragment that resolves predictably, making it easy to
+          internalize after a single listen.
+        </p>
+      </section>
+
+      <!-- Section 4: Bridge -->
+      <section class="analysis-section"
+               data-start="44"
+               data-end="65"
+               data-label="Bridge (0:44–1:05)">
+        <h2>Bridge</h2>
+        <div class="section-timestamp">0:44 – 1:05</div>
+        <p>
+          The bridge strips things back dramatically. The drums cut out entirely,
+          leaving just the vocal and a filtered pad that slowly sweeps upward.
+          This creates a moment of tension — the listener instinctively waits
+          for the beat to return.
+        </p>
+        <p>
+          There's a clever production detail here: a sub-bass tone fades in
+          gradually underneath the pad, building physical energy without any
+          obvious rhythmic movement. You feel it more than you hear it. By the
+          time it reaches full volume around 0:58, there's a palpable sense of
+          anticipation.
+        </p>
+        <p>
+          The vocal delivery shifts too — more sustained notes, wider intervals,
+          pushing into the upper register. The lyrics pivot from narrative to
+          something more abstract and emotional, which is a common structural
+          choice for bridges: step outside the story to reflect on its meaning.
+        </p>
+        <p>
+          At 1:03, a reverse cymbal and a quick filter sweep signal the
+          transition back into the final chorus. It's textbook, but textbook
+          for a reason — it works.
+        </p>
+      </section>
+
+      <a href="../index.html" class="analysis-back-link">&larr; Back to Home</a>
+    </article>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <p>&copy; 2026 NEI'S blog. All rights reserved.</p>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/music-post.js"></script>
+</body>
+</html>
