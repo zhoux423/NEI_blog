@@ -1,5 +1,5 @@
 /**
- * main.js — mobile nav toggle + active link highlighting
+ * main.js — mobile nav toggle, active link highlighting, page transitions
  */
 
 (function () {
@@ -44,6 +44,25 @@
       } else if (linkPath.indexOf('/categories/') !== -1 && path.indexOf(linkPath) === 0) {
         a.classList.add('active');
       }
+    });
+
+    // --- Smooth page transitions ---
+    document.addEventListener('click', function (e) {
+      var anchor = e.target.closest('a');
+      if (!anchor) return;
+
+      var href = anchor.getAttribute('href');
+      if (!href) return;
+
+      // Skip external links, hash links, and special protocols
+      if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) return;
+
+      e.preventDefault();
+      document.body.classList.add('page-leaving');
+
+      setTimeout(function () {
+        window.location.href = href;
+      }, 250);
     });
   });
 })();

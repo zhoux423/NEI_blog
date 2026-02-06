@@ -33,6 +33,18 @@ body {
   line-height: 1.7;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+body.page-leaving {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 a {
@@ -93,7 +105,6 @@ img {
   font-weight: 400;
   color: #aaa;
   letter-spacing: 0.05em;
-  text-transform: lowercase;
 }
 
 .nav-brand:hover {
@@ -112,12 +123,14 @@ img {
   color: var(--text-secondary);
   font-size: 0.88rem;
   font-weight: 500;
-  transition: color 0.2s;
+  border-radius: 4px;
+  transition: color 0.2s, box-shadow 0.25s ease;
 }
 
 .nav-links a:hover,
 .nav-links a:focus-visible {
   color: var(--text-highlight);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.06);
 }
 
 .nav-links a.active {
@@ -174,11 +187,12 @@ img {
   border: 1px solid var(--border);
   border-radius: 3px;
   padding: 1.75rem;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.25s ease;
 }
 
 .post-card:hover {
   border-color: var(--text-highlight);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.04);
 }
 
 .post-card a.post-card-link {
@@ -403,7 +417,6 @@ img {
   font-weight: 400;
   color: #aaa;
   letter-spacing: 0.2em;
-  text-transform: lowercase;
 }
 
 /* ===== Footer ===== */
