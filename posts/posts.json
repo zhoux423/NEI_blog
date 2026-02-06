@@ -1,6 +1,13 @@
 {
   "posts": [
     {
+      "slug": "music-analysis-shell",
+      "title": "Music Analysis Shell (Demo)",
+      "date": "2026-02-05",
+      "category": "Music",
+      "snippet": "Demo post with scroll-synced audio snippets."
+    },
+    {
       "slug": "test-post-1",
       "title": "Test Post 1",
       "date": "2026-02-05",
