@@ -1,4 +1,4 @@
-# NEI_blog
+# NEI'S blog
 
 NEI -> Notably Exhausted Individual
 

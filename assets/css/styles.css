@@ -89,9 +89,9 @@ img {
 
 .nav-acronym {
   font-family: var(--font-body);
-  font-size: 0.55rem;
+  font-size: 0.65rem;
   font-weight: 400;
-  color: var(--text-secondary);
+  color: #aaa;
   letter-spacing: 0.05em;
   text-transform: lowercase;
 }
@@ -379,6 +379,17 @@ img {
   text-transform: uppercase;
 }
 
+.banner-blog {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  line-height: 1;
+  color: var(--text-primary);
+  text-transform: lowercase;
+  margin-top: 0.25rem;
+}
+
 .banner-rule {
   width: 60px;
   border: none;
@@ -388,9 +399,9 @@ img {
 
 .banner-subtitle {
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   font-weight: 400;
-  color: var(--text-secondary);
+  color: #aaa;
   letter-spacing: 0.2em;
   text-transform: lowercase;
 }
