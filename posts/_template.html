@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CHANGE: Set your post title here -->
+  <title>POST TITLE</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-brand">NEI Blog</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../categories/music.html">Music</a></li>
+        <li><a href="../categories/life.html">Life</a></li>
+        <li><a href="../categories/games.html">Games</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+    <article>
+      <header class="post-header">
+        <!-- CHANGE: Post title -->
+        <h1>POST TITLE</h1>
+        <div class="post-meta">
+          <!-- CHANGE: Category (Music / Life / Games) -->
+          <span class="post-card-category">CATEGORY</span>
+          <!-- CHANGE: Date in YYYY-MM-DD format + human-readable -->
+          <time datetime="2026-01-01">Jan 1, 2026</time>
+        </div>
+      </header>
+
+      <div class="post-body">
+        <!-- CHANGE: Write your post content here -->
+        <p>Opening paragraph goes here.</p>
+
+        <h2>Section Heading</h2>
+        <p>More content here. You can use any standard HTML.</p>
+
+        <blockquote>Pull quotes look like this.</blockquote>
+
+        <p>Keep writing. Remove or add sections as needed.</p>
+      </div>
+
+      <a href="../index.html" class="back-link">&larr; Back to Home</a>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 NEI Blog. All rights reserved.</p>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
+
+<!--
+  HOW TO ADD A NEW POST:
+  1. Copy this file and rename it to your-post-slug.html
+  2. Replace all CHANGE sections above with your content
+  3. Add an entry to /posts/posts.json:
+     {
+       "slug": "your-post-slug",
+       "title": "Your Post Title",
+       "date": "2026-MM-DD",
+       "category": "Music",
+       "snippet": "A one or two sentence preview."
+     }
+  4. Commit and push. Done!
+-->

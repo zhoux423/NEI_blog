@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "slug": "why-vinyl-still-matters",
+      "title": "Why Vinyl Still Matters in a Streaming World",
+      "date": "2026-02-03",
+      "category": "Music",
+      "snippet": "Streaming gave us convenience, but vinyl gives us something else entirely — warmth, ritual, and a reason to actually listen to an album front to back."
+    },
+    {
+      "slug": "morning-routines-that-stuck",
+      "title": "Morning Routines That Actually Stuck",
+      "date": "2026-01-28",
+      "category": "Life",
+      "snippet": "After years of trying elaborate morning systems, I found that the only habits that survive are the stupidly simple ones. Here's what finally worked."
+    },
+    {
+      "slug": "revisiting-hollow-knight",
+      "title": "Revisiting Hollow Knight After Five Years",
+      "date": "2026-01-20",
+      "category": "Games",
+      "snippet": "I put 60 hours into Hollow Knight back in 2021 and thought I was done. Coming back to it now, I realize I barely scratched the surface."
+    }
+  ]
+}
